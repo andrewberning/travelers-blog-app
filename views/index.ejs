@@ -2,7 +2,6 @@
 
   <section>
     <div class="container text-center py-5 h-100">
-      <!-- <h2 class="mb-3">Articles</h2> -->
       <a href="/new" class="btn btn-light">Add New Adventure</a>
       <div class="row">
         <% articles.forEach(article=> { %>
@@ -18,10 +17,10 @@
                 <div class="card-text mb-2">
                   <%= article.description %>
                 </div>
-            
+
                 <a href="/<%= article.slug %>" class="btn btn-primary">Read More</a>
                 <a href="edit/<%= article.id %>" class="btn btn-info">Edit</a>
-            
+
                 <form action="/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
                   <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
@@ -30,11 +29,8 @@
           </div>
           <% }) %>
       </div>
-      
+
     </div>
   </section>
 
   <%- include('partials/_footer') -%>
-
-
-

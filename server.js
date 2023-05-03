@@ -1,12 +1,12 @@
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
 const articleRouter = require('./routes/articles');
 const methodOverride = require('method-override');
 const PORT = process.env.PORT || 8000;
+const app = express();
 
-require('dotenv').config({path: './config/.env'});
+require('dotenv').config({ path: './config/.env' });
 
 connectDB();
 
